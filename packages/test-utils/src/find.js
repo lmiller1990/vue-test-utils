@@ -1,5 +1,6 @@
 // @flow
 
+// $FlowIgnore
 import findDOMNodes from './find-dom-nodes'
 import {
   DOM_SELECTOR,

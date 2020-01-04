@@ -1,5 +1,6 @@
 const rollup = require('rollup').rollup
 const flow = require('rollup-plugin-flow-no-whitespace')
+const typescript = require('@rollup/plugin-typescript')
 const resolve = require('path').resolve
 const buble = require('rollup-plugin-buble')
 const nodeResolve = require('rollup-plugin-node-resolve')
@@ -57,6 +58,7 @@ rollupOptions.forEach(options => {
     input: resolve('src/index.js'),
     external: ['vue', 'vue-template-compiler'],
     plugins: [
+      typescript(),
       flow(),
       json(),
       buble({
